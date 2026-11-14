@@ -659,6 +659,18 @@ body.big-on{overflow:hidden}
 }
 #dz.big.fb:not(.kbdedit).rot.libopen:not(.simon) .dz-lib{display:grid;left:calc(var(--il) + 6px);top:calc(var(--it) + 58px);bottom:calc(var(--ib) + 60px);width:176px}
 #dz.big.fb:not(.kbdedit).rot.sideopen .dz-side{right:calc(var(--ir) + 6px);left:auto;top:calc(var(--it) + 58px);bottom:calc(var(--ib) + 60px);width:272px}
+
+/* v42: en pantalla grande del computador se pueden ocultar la lista de equipos (izquierda) y el panel de datos (derecha) */
+.dz-hidel,.dz-hides{display:none}
+@media(min-width:1000px){
+  #dz.big .dz-hidel,#dz.big .dz-hides{display:inline-flex;align-items:center}
+  #dz.big.fb .dz-hidel,#dz.big.fb .dz-hides{display:none}
+  #dz.big.hidelib:not(.fb) .dz-lib{display:none}
+  #dz.big.hideside:not(.fb) .dz-side{display:none}
+  #dz.big.hidelib:not(.fb) .dz-canvas{grid-column:1/3}
+  #dz.big.hideside:not(.fb) .dz-canvas{grid-column:2/4}
+  #dz.big.hidelib.hideside:not(.fb) .dz-canvas{grid-column:1/4}
+}
 .tabs{display:none}
 #p-resumen,#p-registrar,#p-esquema{display:none!important}
 #syncbar,#savewarn{display:flex}
@@ -845,6 +857,8 @@ body.big-on{overflow:hidden}
         <button type="button" class="btn ghost" data-dz="rot" aria-pressed="false" title="Pantalla grande en horizontal o en vertical">↻ Horizontal</button>
         <button type="button" class="btn ghost" data-dz="d3" aria-pressed="true" hidden>3D</button>
         <button type="button" class="btn ghost" data-dz="big" aria-pressed="false">Pantalla grande</button>
+        <button type="button" class="btn ghost dz-hidel" data-dz="hidelib" aria-pressed="false" title="Esconde la lista de equipos de la izquierda para ver el plano más grande">◀ Ocultar equipos</button>
+        <button type="button" class="btn ghost dz-hides" data-dz="hideside" aria-pressed="false" title="Esconde el panel de datos de la derecha para ver el plano más grande">Ocultar panel ▶</button>
         <button type="button" class="btn ghost" data-dz="selmode" aria-pressed="false" title="Encerrar varios equipos en un recuadro para moverlos juntos">⬚ Seleccionar</button>
         <select id="dz-tpl" aria-label="Empezar con una plantilla">
           <option value="" selected>Plantilla…</option>
@@ -3423,7 +3437,8 @@ function dzFit(){
     dzCanvas(); cv.scrollLeft=Math.max(0,x0*DZ.zoom); cv.scrollTop=Math.max(0,y0*DZ.zoom); return;
   }
   var mx=0, my=0; DZ.d.nodes.forEach(function(n){ mx=Math.max(mx,n.x); my=Math.max(my,n.y) });
-  DZ.zoom=Math.min(1,Math.max(0.3,+Math.min(cv.clientWidth/(mx+190),cv.clientHeight/(my+170)).toFixed(2)));
+  var zmax=(zf&&zf.classList.contains('big'))?1.6:1;
+  DZ.zoom=Math.min(zmax,Math.max(0.3,+Math.min(cv.clientWidth/(mx+190),cv.clientHeight/(my+170)).toFixed(2)));
   dzCanvas(); cv.scrollLeft=0; cv.scrollTop=0;
 }
 function dzZoom(k){ var cv=$('#dz-canvas'), pq=dzPad(cv), vh=cv.clientHeight-pq.t, cx=(cv.scrollLeft+cv.clientWidth/2-pq.l)/DZ.zoom, cy=(cv.scrollTop+vh/2)/DZ.zoom;
@@ -3546,6 +3561,15 @@ function dzLockLand(){
 }
 function dzUnlock(){ try{ var o=window.screen&&screen.orientation; if(o&&o.unlock) o.unlock() }catch(e){} }
 function dzRotLayout(){ var de=document.documentElement; de.style.setProperty('--rw',window.innerWidth+'px'); de.style.setProperty('--rh',window.innerHeight+'px') }
+function dzHideEval(){
+  var z=$('#dz'); if(!z) return;
+  z.classList.toggle('hidelib',!!DZ.hideLib); z.classList.toggle('hideside',!!DZ.hideSide);
+  var a=$('[data-dz="hidelib"]'), b=$('[data-dz="hideside"]');
+  if(a){ a.textContent=DZ.hideLib?'▶ Mostrar equipos':'◀ Ocultar equipos'; a.setAttribute('aria-pressed',DZ.hideLib?'true':'false') }
+  if(b){ b.textContent=DZ.hideSide?'◀ Mostrar panel':'Ocultar panel ▶'; b.setAttribute('aria-pressed',DZ.hideSide?'true':'false') }
+  if(DZ.big) dzFit();
+}
+function dzHideStore(){ lsSet('lf-hide-v1',(DZ.hideLib?'l':'')+(DZ.hideSide?'s':'')) }
 function dzFbEval(){
   var z=$('#dz'); if(!z) return;
   var fb=!!(DZ.big&&(DZ.rot||dzIsPhone())), was=z.classList.contains('fb');
@@ -3645,6 +3669,8 @@ function dzAct(a,b){
     case 'fit': dzFit(); break;
     case 'd3': view.d3=!view.d3; $$('input[name=sview]').forEach(function(r){ r.checked=(r.value==='3d')===view.d3 }); renderLegend(); renderAll(); break;
     case 'big': setDzBig(!DZ.big); break;
+    case 'hidelib': DZ.hideLib=!DZ.hideLib; dzHideStore(); dzHideEval(); break;
+    case 'hideside': DZ.hideSide=!DZ.hideSide; dzHideStore(); dzHideEval(); break;
     case 'tbar': { var cvT=$('#dz-canvas'), p0=cvT?dzPad(cvT).t:0; DZ.tbHide=!DZ.tbHide; lsSet('lf-tb-v1',DZ.tbHide?'1':'0'); dzFbEval(); if(cvT){ var p1=dzPad(cvT).t; cvT.scrollTop=Math.max(0,cvT.scrollTop+(p1-p0)) } break }
     case 'rot': DZ.rotPref=(DZ.rotPref===false); lsSet('lf-rot-v1',DZ.rotPref?'1':'0'); DZ.rotWait=0; dzRotEval(); break;
     case 'libt': { var zz=$('#dz'); zz.classList.toggle('libopen'); var lo=zz.classList.contains('libopen'); dzLibBtn(); if(lo&&dzFW()<700){ zz.classList.remove('sideopen'); dzSideT() } break }
@@ -3672,7 +3698,7 @@ function dzAct(a,b){
 }
 function dzInit(){
   var root=$('#dz'), cv=$('#dz-canvas'), lib=$('#dz-lib'), side=$('#dz-side');
-  DZ.rotPref=(lsGet('lf-rot-v1')!=='0'); DZ.rotWait=0; DZ.rot=false; DZ.tbHide=(lsGet('lf-tb-v1')==='1');
+  DZ.rotPref=(lsGet('lf-rot-v1')!=='0'); DZ.rotWait=0; DZ.rot=false; DZ.tbHide=(lsGet('lf-tb-v1')==='1'); var hv0=lsGet('lf-hide-v1')||''; DZ.hideLib=hv0.indexOf('l')>=0; DZ.hideSide=hv0.indexOf('s')>=0; dzHideEval();
   root.addEventListener('click',function(ev){ var b=ev.target.closest&&ev.target.closest('[data-dz]'); if(b) dzAct(b.getAttribute('data-dz'),b) });
   $('#dz-tpl').addEventListener('change',function(){ var v=$('#dz-tpl').value; $('#dz-tpl').value=''; if(dzLocked()) return; dzTpl(v) });
   side.addEventListener('input',function(ev){ if(ev.target.id==='dz-ip') dzIpLive(ev.target); if(ev.target.id==='dz-ipq'){ var lq=$('#dz-ipcat-list'); if(lq) lq.innerHTML=dzIpCatList(ev.target.value); return } if(/^dz-pw-/.test(ev.target.id)){ dzPwSet(ev.target); return } if(ev.target.id==='dz-sv'){ dzSvSet(ev.target); return } if(ev.target.id==='dz-att'){ dzAttSet(ev.target); return } if(ev.target.id==='dz-meas'){ dzMeasSet(ev.target); return } if(ev.target.id!=='dz-m'||DZ.sim) return; var c=DZ.sel&&DZ.sel.k==='c'&&dzCab(DZ.sel.id); if(!c) return; var s=ev.target.value.trim(); if(s==='') return; dzSetM(c,parseFloat(s)) });
