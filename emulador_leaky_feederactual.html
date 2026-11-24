@@ -411,6 +411,62 @@ nav.tabs,#syncbar{display:none!important}
 
 /* v23.1: metros del cable en azul marino (el rojo queda para los dB negativos) */
 .elabel{fill:#0b3d91;stroke-width:4.5px}
+/* v18: salidas 1 y 2 de las fuentes */
+.dz-canvas .stnum{font:800 10px var(--f-mono);fill:#3b1a00;paint-order:stroke;stroke:#fff;stroke-width:3px;pointer-events:none}
+.dz-canvas .stfree{fill:#555;stroke:#fff;stroke-width:1.5;pointer-events:none}
+/* v16: jumpers */
+.dz-canvas .elabel .jpc{font-weight:800;fill:#b45309}
+.dz-canvas .elabel .jpc.t{fill:#c00000}
+.dz-canvas .jptag{font:800 10.5px var(--f-mono);paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round;pointer-events:none}
+.dz-side .jpbox{margin-top:12px;padding:10px 12px;border:1px solid var(--line);border-left:5px solid #c00000;border-radius:8px;background:var(--surface-2)}
+.dz-side .jpbox h4{margin:0 0 4px;font:700 14.5px var(--f-body)}
+.dz-side .jprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.dz-side .jpb{display:grid;gap:2px;text-align:left;min-height:52px;padding:6px 12px}
+.dz-side .jpb span{font-size:12px;color:var(--muted)}
+.dz-side .jpb.on b{color:var(--ok)}
+.dz-side .jpb.off{border-color:var(--bad)}
+.dz-side .jpb.off b{color:var(--bad)}
+.dz-side .jpport{margin-top:8px;display:grid;gap:4px}
+.dz-side .jpport .lab{font-size:13px;font-weight:600}
+.dz-side .jpport .lab i{font-weight:400;color:var(--muted)}
+.dz-side .jpseg label{min-height:40px;font-size:13px}
+.dz-side .jpseg label.rf:has(input:checked){background:#b45309;color:#fff}
+.dz-side .jpseg label.t:has(input:checked){background:#c00000;color:#fff}
+/* v15: textos libres */
+.dz-canvas .dtx{cursor:move;touch-action:none}
+.dz-canvas .dtx .txhit{fill:transparent;stroke:none}
+.dz-canvas .dtx .txhit.box{fill:#fff;stroke:#14213A;stroke-width:1.4}
+.dz-canvas .dtx .txhit.hl{fill:#fff3a0;stroke:none}
+.dz-canvas .dtx:hover .txhit:not(.box):not(.hl){stroke:#9fb3d1;stroke-dasharray:3 3;stroke-width:1}
+.dz-canvas .dtx .txsel{fill:none;stroke:#1F4E9E;stroke-width:2;stroke-dasharray:6 4;pointer-events:none}
+#dz.simon .dz-canvas .dtx{cursor:pointer}
+.dz-side .txta{width:100%;min-height:76px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font-size:15px;resize:vertical}
+.dz-side .txgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px;align-items:end}
+.dz-side .txrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.dz-side .txrow select{width:auto;min-width:70px;min-height:40px}
+.dz-side .txrow .btn.ghost{min-height:40px;min-width:42px;padding:4px 10px}
+.dz-side .btn.ghost.txb[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.dz-side .txsep{width:10px}
+.dz-side .txsw{width:32px;height:32px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0}
+.dz-side .txsw[aria-pressed="true"]{outline:3px solid var(--accent);outline-offset:2px}
+.dz-side .txpick{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:var(--muted);cursor:pointer}
+.dz-side .txpick input{width:36px;height:32px;padding:0;border:1px solid var(--line);border-radius:6px;background:none}
+.dz-side .txseg{margin-top:2px}
+.dz-side .txpres .btn.ghost{font-size:13.5px}
+.dz-bar .txadd b{font-size:17px;margin-right:2px}
+/* v14: aviso de llave saltada */
+.dz-canvas .flowkey .brkal{pointer-events:auto}
+.dz-canvas .flowkey .brkx{position:absolute;top:6px;right:6px;z-index:2;width:28px;height:28px;border:1px solid #d9a3a3;border-radius:6px;background:#fff;color:#7a1010;font:700 14px var(--f-body);cursor:pointer;padding:0}
+.dz-canvas .flowkey .brkal{position:absolute;top:46px;left:6px;width:min(520px,calc(100vw - 60px));display:grid;gap:6px}
+.dz-canvas .flowkey .brkal p{margin:0;display:grid;gap:3px;padding:9px 12px;border-radius:8px;border:2px solid #d00000;border-left-width:7px;background:#fff1f0;color:#3b0a0a;font:500 13px var(--f-body);white-space:normal;box-shadow:0 3px 10px rgba(0,0,0,.22)}
+.dz-canvas .flowkey .brkal p.warn{border-color:#b45309;background:#fff6e6;color:#3b2300}
+.dz-canvas .flowkey .brkal .t{font:800 14px var(--f-cond);letter-spacing:.04em;color:#c00000}
+.dz-canvas .flowkey .brkal p.warn .t{color:#b45309}
+.dz-canvas .flowkey .brkal .s{font-weight:600;color:#1F4E9E}
+.dz-side .brkside{margin-top:10px;padding:9px 12px;border-radius:8px;border:2px solid var(--bad);border-left-width:7px;background:var(--bad-bg);display:grid;gap:4px;font-size:13.5px}
+.dz-side .brkside.warn{border-color:var(--warn);background:var(--warn-bg)}
+.dz-side .brkside>b{color:var(--bad);font-family:var(--f-cond);font-size:15px;letter-spacing:.03em}
+.dz-side .brkside.warn>b{color:var(--warn)}
 /* v13: cajitas de texto de cada equipo, sin montarse */
 .dz-canvas .lbg{fill:#fff;fill-opacity:.9;stroke:#cfd6e3;stroke-width:1}
 .dz-canvas .lldr{fill:none;stroke:#5d6b82;stroke-width:1.6;stroke-dasharray:4 3;pointer-events:none}
@@ -1006,6 +1062,7 @@ body.rl-on .tabs{margin-bottom:8px}
         <button type="button" class="btn ghost" data-dz="paste" disabled title="Pega lo copiado o cortado (Ctrl+V)">Pegar</button>
         <button type="button" class="btn ghost" data-dz="dup" disabled title="Duplica el equipo o grupo elegido con sus cables (Ctrl+D)">Duplicar</button>
         <button type="button" class="btn ghost bad" data-dz="delsel" disabled>Borrar</button>
+        <button type="button" class="btn ghost txadd" data-dz="txadd" title="Agrega un texto al plano: títulos, niveles, galerías o notas (como en Visio)"><b style="font-family:Georgia,serif">T</b> Texto</button>
         <button type="button" class="btn ghost" data-dz="clear" title="Borra todo el diagrama y empieza de cero">Borrar todo</button>
         <button type="button" class="btn ghost" data-dz="save">Guardar</button>
         <button type="button" class="btn ghost" data-dz="open">Abrir</button>
@@ -1177,12 +1234,12 @@ E3.model=function(type,skey,nOut,hasPw,ledOff){
   else{ var sc=base; if(k==='q'||skey==='fuente') sc=hex(k==='q'?'#e8700d':'#f2a56a'); if(k==='p'&&skey==='fuente_quqomm') sc=hex('#e4e4e4');
     addBox(M,[0,0,0],[W/2,H/2,D/2],sc,{bev:bev,tex:tx(0,W),gloss:1}); M.sideCol=sc }
   var sp=E3.portSpec(type,nOut), pt=function(side,f){ var x=(side==='r'?1:-1)*W/2; return [x,f*H,0] }, ax=0;
-  { var g=sp.inn, p0=pt(g.s,g.f), t0=addGland(M,p0,0,g.s==='r'?1:-1,r,L); M.ports.push({id:'in',s:g.s,tip:t0,r:r}) }
+  { var g=sp.inn, p0=pt(g.s,g.f); if(ISPW[type]) M.ports.push({id:'in',s:g.s,tip:p0,r:r,nog:1}); else { var t0=addGland(M,p0,0,g.s==='r'?1:-1,r,L); M.ports.push({id:'in',s:g.s,tip:t0,r:r}) } }
   sp.outs.forEach(function(o,i){ var vt=o.s==='b'||o.s==='t', p0=vt?[o.f*W,(o.s==='t'?1:-1)*H/2,0]:pt(o.s,o.f), t=vt?addGland(M,p0,1,o.s==='t'?1:-1,r,L):addGland(M,p0,0,o.s==='r'?1:-1,r,L); M.ports.push({id:'o'+i,s:o.s,tip:t,r:r}) });
   if(hasPw){ (type==='vpc'?[[-0.21*W,'pwl'],[0.21*W,'pwr']]:[[0,'pw']]).forEach(function(q){ var pb=[q[0],-H/2,0], tb=addGland(M,pb,1,-1,r,L); M.ports.push({id:q[1],s:'b',tip:tb,r:r}) }) }
-  if(ISPW[type]){ var pb2=[0,-H/2,0], tb2=addGland(M,pb2,1,-1,r,L); M.ports.push({id:'pws',s:'b',tip:tb2,r:r}) }
+  if(ISPW[type]){ /* v19: la fuente tiene solo sus dos salidas de abajo (1 y 2) */ [[-0.24*W,'pws1'],[0.24*W,'pws2']].forEach(function(q){ var pb2=[q[0],-H/2,0], tb2=addGland(M,pb2,1,-1,r,L); M.ports.push({id:q[1],s:'b',tip:tb2,r:r}) }); M.ports.push({id:'pws',s:'b',tip:[0,-H/2-L,0],r:r,nog:1}) }
   /* cables amarillos (solo en el visor) */
-  M.ports.forEach(function(p){ var d=(p.s==='r'||p.s==='t')?1:-1, axis=(p.s==='b'||p.s==='t')?1:0, c=[p.tip[0],p.tip[1],p.tip[2]]; c[axis]+=d*L*1.3;
+  M.ports.forEach(function(p){ if(p.nog) return; var d=(p.s==='r'||p.s==='t')?1:-1, axis=(p.s==='b'||p.s==='t')?1:0, c=[p.tip[0],p.tip[1],p.tip[2]]; c[axis]+=d*L*1.3;
     addCyl(M,c,axis,L*2.6,r*0.46,r*0.46,(p.s==='b'&&!/^o\d/.test(p.id))?hex('#222'):hex('#ffc000'),{seg:14,dir:d,stub:1,nocap0:true}) });
   if(ledOff&&T.led&&T.off) M.led={x:T.led.x-W/2,y:H/2-T.led.y,z:D/2,r:T.led.r,col:T.led.col};
   M.r=r; M.L=L; return M };
@@ -1819,7 +1876,7 @@ function spriteOf(type,skey,off){
   var ctx=cv.getContext('2d'); ctx.imageSmoothingQuality='high';
   E3.draw(ctx,M,{obl:OBL,scale:f.s*SPR_K*SPR_RES,cx:(cw/2-x0)*SPR_RES,cy:(ch/2-y0)*SPR_RES},{shadowA:0.32,wall:1.6});
   M.ports.forEach(function(p){ var q=E3.proj(M,cam,p.tip), a={x:q[0]-x0,y:q[1]-y0,s:p.s};
-    if(p.id==='in') A.inn=a; else if(p.id==='pw') A.pw=a; else if(p.id==='pwl') A.pwl=a; else if(p.id==='pwr') A.pwr=a; else if(p.id==='pws') A.pws=a; else A.outs[parseInt(p.id.slice(1),10)]=a });
+    if(p.id==='in') A.inn=a; else if(p.id==='pw') A.pw=a; else if(p.id==='pwl') A.pwl=a; else if(p.id==='pwr') A.pwr=a; else if(p.id==='pws') A.pws=a; else if(p.id==='pws1') A.pws1=a; else if(p.id==='pws2') A.pws2=a; else A.outs[parseInt(p.id.slice(1),10)]=a });
   url=cv.toDataURL('image/png');
   var led=null; if(M.led){ var ql=E3.proj(M,cam,[M.led.x,M.led.y,M.led.z]); led={x:ql[0]-x0,y:ql[1]-y0,r:M.led.r*cam.scale,col:M.led.col} }
   return SPR[key]={url:url,w:cw,h:ch,box:{w:bb.x1-bb.x0,h:bb.y1-bb.y0},a:A,led:led};
@@ -1833,7 +1890,7 @@ function nodeBox(n){
 function portOffs(n,h){ var d=Math.max(h*0.28,6); if(n<=1) return [0]; if(n===2) return [-d,d]; var o=[]; for(var i=0;i<n;i++) o.push((i-(n-1)/2)*d*1.15); return o; }
 /* Posición de los puertos respecto al centro del equipo. dy: negativo = arriba. x: negativo = izquierda. s: lado. */
 function geo(type,b){
-  if(d3on()){ var A=spriteOf(type,TBY[type].s).a; return {inDy:A.inn.y,inX:A.inn.x,outs:A.outs.map(function(o){return {s:o.s,dy:o.y,x:o.x}}),pw:A.pw||null,pwl:A.pwl||null,pwr:A.pwr||null,pws:A.pws||null} }
+  if(d3on()){ var A=spriteOf(type,TBY[type].s).a; return {inDy:A.inn.y,inX:A.inn.x,outs:A.outs.map(function(o){return {s:o.s,dy:o.y,x:o.x}}),pw:A.pw||null,pwl:A.pwl||null,pwr:A.pwr||null,pws:A.pws||null,pws1:A.pws1||null,pws2:A.pws2||null} }
   var t=b.h/2-4, hw=b.w/2;
   if(type==='der2') return {inDy:0,inX:-hw,outs:[{s:'r',dy:-t,x:hw},{s:'r',dy:t,x:hw}],pw:null};
   if(type==='der3') return {inDy:-t,inX:-hw,outs:[{s:'r',dy:-t,x:hw},{s:'r',dy:t,x:hw},{s:'l',dy:t,x:-hw}],pw:null};
@@ -2114,19 +2171,23 @@ function dzVst(v,P){ return v<P.m?'bad':(v<P.m+2?'warn':'ok') }
    si dos terminales llegan al mismo tramo, cada amplificador toma de la más cercana (aproximado). La caída en cada cable es R × metros × la corriente de todo lo que queda más allá. */
 function dzPower(d){
   d=d||DZ.d;
-  var key=JSON.stringify([d.nodes.map(function(n){ return n.id+':'+n.type+(typeof n.v==='number'?':'+n.v:'') }),d.cabs.map(function(c){ return [c.from,c.port,c.to,c.m] }),d.pw||0,CUMM]);
+  var key=JSON.stringify([d.nodes.map(function(n){ return n.id+':'+n.type+(typeof n.v==='number'?':'+n.v:'')+(n.ji==='0'?':ji':'')+(n.jo==='0'?':jo':'')+(n.jp?':'+JSON.stringify(n.jp):'') }),d.cabs.map(function(c){ return [c.from,c.port,c.to,c.m] }),d.pw||0,CUMM]);
   if(DZ.pwk===key&&DZ.pwv) return DZ.pwv;
   var SEG=dzSegFn(d), P=dzPwp(d), byId={}, adj={}, feeds=[], PW={prm:P,amp:{},src:{},arms:[],armBy:{},flow:{},cab:{},unf:[],far:[],has:false,check:false,nSrc:0}, Ia=P.i/1000, Rk=P.r/1000;
   d.nodes.forEach(function(n){ byId[n.id]=n; if(ISPW[n.type]) PW.nSrc++ });
   var srcV=function(id){ var n=byId[id]; return (n&&typeof n.v==='number'&&isFinite(n.v))?Math.max(PWR.v[0],Math.min(PWR.v[1],n.v)):P.v };
-  var dc=function(id,side){ var n=byId[id]; return (n&&n.type==='vpc')?id+(side==='R'?'#R':'#L'):id };
-  var isAmp=function(x){ var n=byId[x.split('#')[0]]; return !!(n&&PWAMP[n.type]) };
-  d.nodes.forEach(function(n){ if(ISPW[n.type]) return; if(n.type==='vpc'){ adj[n.id+'#L']=[]; adj[n.id+'#R']=[] } else adj[n.id]=[] });
+  var dc=function(id,side){ var n=byId[id]; if(n&&n.type==='vpc') return id+(side==='R'?'#R':'#L');
+    /* v16: jumpers del amplificador Becker. JU24 = entrada, JU25 = salida: en OFF ese lado no toma ni deja pasar voltaje */
+    if(n&&BECKER_AMP[n.type]){ if(side==='R'&&n.jo==='0') return id+'#xR'; if(side==='L'&&n.ji==='0') return id+'#xL' }
+    return id };
+  var isAmp=function(x){ if(x.indexOf('#x')>0) return false; var n=byId[x.split('#')[0]]; return !!(n&&PWAMP[n.type]) };
+  d.nodes.forEach(function(n){ if(ISPW[n.type]) return; if(n.type==='vpc'){ adj[n.id+'#L']=[]; adj[n.id+'#R']=[] } else { adj[n.id]=[]; if(BECKER_AMP[n.type]){ adj[n.id+'#xL']=[]; adj[n.id+'#xR']=[] } } });
   d.cabs.forEach(function(c){
     var f=byId[c.from], t=byId[c.to]; if(!f||!t) return;
     if(dzIsPw(c.port)){ if(ISPW[t.type]&&dzPwList(f.type).indexOf(c.port)>=0) feeds.push({cid:c.id,node:dc(c.from,c.port==='pr'?'R':'L'),src:c.to,hid:c.from,port:c.port,m:c.m}); return }
     if(ISPW[t.type]||ISPW[f.type]) return;
     if(DZ.realSim&&(f.type==='root'||t.type==='root')) return; /* plano real: la cabecera no deja pasar el voltaje */
+    if(JPDER[f.type]&&f.jp&&(f.jp[c.port]==='rf'||f.jp[c.port]==='t')) return; /* v16: jumper RF ONLY o TERMINATE: por esa salida no pasa voltaje */
     var u=dc(c.from,'R'), v=dc(c.to,'L'); var sm=SEG(c); adj[u].push({to:v,m:sm,cid:c.id,u:u}); adj[v].push({to:u,m:sm,cid:c.id,u:u});
   });
   PW.has=PW.nSrc>0||feeds.length>0; PW.check=!!P.on&&PW.nSrc>0;
@@ -2342,7 +2403,8 @@ function dzNoPwLab(n,b,S){
     o+=tx('si prende: '+nfV.format(a.vi)+' V',10,need?'#d00000':'#b45309',700);
   } else {
     o+=tx('sin voltaje',0,'#d00000');
-    o+=tx(a&&!a.nofeed?nfV.format(a.v)+' V · mínimo '+nfV.format(P.m)+' V':'sin fuente que lo alimente',10,'#d00000',600);
+    var jn=dzNode(n.id), jtx=jn&&(jn.ji==='0'||jn.jo==='0')?((jn.ji==='0'&&jn.jo==='0')?'JU24 y JU25 en OFF':(jn.ji==='0'?'JU24 (entrada) en OFF':'JU25 (salida) en OFF')):'';
+    o+=tx(a&&!a.nofeed?nfV.format(a.v)+' V · mínimo '+nfV.format(P.m)+' V':(jtx?'jumper '+jtx:'sin fuente que lo alimente'),10,'#d00000',600);
   }
   if(x3) o+=tx(x3,10,'#d00000');
   return o;
@@ -2479,9 +2541,23 @@ function dzDirNote(){
 function dzFlowNote(){
   return '<p class="small flownote"><b class="kb">Azul = RF:</b> sale de la cabecera y va de izquierda a derecha (de la salida de un equipo a la entrada del siguiente). <b class="kr">Rojo = voltaje:</b> va de la fuente hacia los amplificadores, así que en un mismo cable puede ir en sentido contrario a la RF. Solo se anima donde la RF llega y donde pasa corriente.</p>';
 }
+/* v14: aviso claro cuando salta o se sobrecarga la llave de un brazo */
+function dzBrkAlerts(PW){
+  if(!PW||!PW.arms) return [];
+  var out=[], Ia=(PW.prm&&PW.prm.i?PW.prm.i/1000:0.15);
+  PW.arms.forEach(function(a){
+    var nm=esc(a.src)+' · brazo '+esc(dzArmName(a)), n=a.n||0, mx=a.brk?Math.floor(a.brk/Ia+1e-9):0;
+    if(a.trip) out.push({k:'bad',t:'⚡ SALTÓ LA LLAVE de '+nf.format(a.brk)+' A',d:'Fuente '+nm+': pide <b>'+nfA.format(a.Areq)+' A</b> ('+n+' amplificadores × '+nfA.format(Ia)+' A). Todo ese brazo quedó <b>sin voltaje</b> y la señal se corta en el primer amplificador.',s:'Solución: agrega otra fuente o usa los dos brazos del VPC para que cada brazo tenga <b>10 amplificadores o menos</b> (con '+nf.format(a.brk)+' A aguanta como máximo '+mx+').'});
+    else if(a.ovl) out.push({k:'warn',t:'⚠ SOBRECARGA en la llave de '+nf.format(a.brk)+' A',d:'Fuente '+nm+': pide <b>'+nfA.format(a.A)+' A</b> ('+n+' amplificadores). Por ahora prende, pero la llave puede saltar.',s:'Solución: reparte la carga para que el brazo no pase de '+nf.format(a.brk)+' A (unos '+mx+' amplificadores).'});
+  });
+  return out;
+}
+document.addEventListener('pointerdown',function(e){ var x=e.target&&e.target.closest&&e.target.closest('.brkx'); if(x){ DZ.brkHid=true; var al=x.closest('.brkal'); if(al) al.remove(); e.stopPropagation(); e.preventDefault() } },true);
 function dzKeyHtml(PW){
   var sw=function(c){ return '<svg width="30" height="8" aria-hidden="true"><path d="M2 4H28" stroke="'+c+'" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"/></svg>' };
-  return '<div class="flowkey" aria-hidden="true"><div><span>'+sw('#0b63ff')+'RF · un solo sentido</span>'+(PW&&PW.has?'<span>'+sw('#e5102b')+'Voltaje · según la fuente</span>':'')+'</div></div>';
+  var al=DZ.brkHid?[]:dzBrkAlerts(PW);
+  return '<div class="flowkey" aria-hidden="true"><div><span>'+sw('#0b63ff')+'RF · un solo sentido</span>'+(PW&&PW.has?'<span>'+sw('#e5102b')+'Voltaje · según la fuente</span>':'')+'</div>'+
+    (al.length?'<section class="brkal"><button type="button" class="brkx" title="Ocultar aviso">✕</button>'+al.map(function(x){ return '<p class="'+x.k+'"><b class="t">'+x.t+'</b><span>'+x.d+'</span><span class="s">'+x.s+'</span></p>' }).join('')+'</section>':'')+'</div>';
 }
 function dzCabSpec(c){
   var P=dzPwp(); return '<br>Cable RNG-500: <b>'+nfD.format(DB100)+' dB cada 100 m</b> → este tramo pierde '+nfD.format(mToDb(c.m))+' dB; <b>'+nf.format(P.r)+' Ω/km</b> → '+nfD.format(P.r*c.m/1000)+' Ω de ida y vuelta (el cable aguanta 48 V y 8 A).';
@@ -2572,7 +2648,7 @@ function dzCabPts(c,PS){
     return {s:{x:c.fx+1.5,y:c.fy,s:'r'},e:e0,box:null,loose:'from',lp:{x:c.fx,y:c.fy}} }
   var f=dzNode(c.from), t=dzNode(c.to); if(!f||!t) return null;
   var a=(PS&&PS[c.from])||dzPorts(f), e=(PS&&PS[c.to])||dzPorts(t), pw=dzIsPw(c.port);
-  var s=pw?dzPwPt(a,c.port):a.outs[c.port], en=pw?e.pws:e.inn; if(!s||!en) return null;
+  var s=pw?dzPwPt(a,c.port):a.outs[c.port], en=pw?dzSrcTerm(e,c):e.inn; if(!s||!en) return null;
   return {s:s,e:en,box:pw?{x0:t.x-e.b.w/2-12,x1:t.x+e.b.w/2+12,y0:t.y-e.b.h/2-12,y1:t.y+e.b.h/2+12}:null};
 }
 function dzPtsOf(d){
@@ -2601,6 +2677,10 @@ function dzPwRoute(s,e,bx,port){
   var xo=(sx<(bx.x0+bx.x1)/2)?bx.x0-14:bx.x1+14, ya=Math.max(sy+4,Math.min(sy+14,bx.y0-6));
   return {d:'M'+sx+' '+sy+'V'+ya+'H'+xo+'V'+base+'H'+ex+'V'+ey,lx:xo+(xo<sx?-6:6),ly:(ya+base)/2,la:xo<sx?'end':'start'};
 }
+/* v18: la fuente tiene dos salidas (1 y 2), como la QuQomm: el primer cable va a la 1 y el segundo a la 2 */
+function dzNearSrc(wp){ var best=null, bd=160; DZ.d.nodes.forEach(function(n){ if(!ISPW[n.type]) return; var b=dzPorts(n).b, dx=Math.max(0,Math.abs(wp.x-n.x)-b.w/2), dy=Math.max(0,Math.abs(wp.y-n.y)-b.h/2), dd=Math.hypot(dx,dy); if(dd<bd){ bd=dd; best=n.id } }); return best }
+function dzSrcCabs(id){ return DZ.d.cabs.filter(function(c){ return c.to===id&&dzIsPw(c.port) }) }
+function dzSrcTerm(e,c){ var k=dzSrcCabs(c.to).indexOf(c); return k===0?(e.pws1||e.pws):(k===1?(e.pws2||e.pws):e.pws) }
 function dzPwPortHtml(n,P,port){
   var q=port==='s'?P.pws:dzPwPt(P,port); if(!q) return '';
   var px=q.x-n.x, py=q.y-n.y, armed=DZ.arm&&DZ.arm.from===n.id&&DZ.arm.port===port;
@@ -2637,7 +2717,7 @@ function dzLinkOk(d,from,port,to){
   for(var i=0;i<d.cabs.length;i++){ var c=d.cabs[i];
     if(from!=null&&c.from===from&&c.port===port) return 'Esa salida ya tiene un cable. Quítalo primero.';
     if(to!=null&&c.to===to&&!ISPW[t.type]) return to+' ya recibe un cable'+(c.from==null?' suelto':' (de '+c.from+')')+'. Un equipo tiene una sola entrada: quita ese cable primero.'; }
-  if(dzIsPw(port)){ if(!ISPW[t.type]) return 'Las terminales de alimentación solo se unen a una fuente de respaldo.'; return '' }
+  if(dzIsPw(port)){ if(!ISPW[t.type]) return 'Las terminales de alimentación solo se unen a una fuente de respaldo.'; if(d.cabs.filter(function(c){ return c.to===to&&dzIsPw(c.port) }).length>=2) return 'La fuente '+to+' ya tiene sus dos salidas ocupadas. Pon otra fuente para alimentar más brazos.'; return '' }
   if(t&&ISPW[t.type]) return 'Una fuente de respaldo no va al cable de la red: se une a una terminal de alimentación de un DPC o un VPC.';
   if(from==null||to==null) return '';
   var cur=from, g=0;
@@ -2656,6 +2736,8 @@ function dzClean(r){
     if(!root&&BECKER_AMP[n.type]&&n.ip){ var q=ipNorm(n.ip); if(q) o.ip=q }
     if(ISPW[n.type]&&typeof n.mx==='number'&&isFinite(n.mx)&&typeof n.my==='number'&&isFinite(n.my)){ o.mx=Math.round(dzn(n.mx,-4000,4000,0)); o.my=Math.round(dzn(n.my,-4000,4000,0)) }
     if(ISPW[n.type]&&typeof n.v==='number'&&isFinite(n.v)) o.v=Math.round(dzn(n.v,PWR.v[0],PWR.v[1],PWD.v)*10)/10;
+    if(!root&&BECKER_AMP[n.type]){ if(n.ji==='0') o.ji='0'; if(n.jo==='0') o.jo='0' }
+    if(!root&&JPDER[n.type]&&n.jp&&typeof n.jp==='object'){ var jq={}, nj=0; Object.keys(n.jp).forEach(function(k){ var v=n.jp[k]; if(/^[0-2]$/.test(k)&&(v==='rf'||v==='t')&&+k<(OUTS[n.type]||0)){ jq[k]=v; nj++ } }); if(nj) o.jp=jq }
     seen[n.id]=1; if(root) d.nodes.unshift(o); else d.nodes.push(o);
   });
   if(!seen.CAB) d.nodes.unshift({id:'CAB',type:'root',x:100,y:220});
@@ -2680,6 +2762,9 @@ function dzClean(r){
   });
   if(r.pw&&typeof r.pw==='object'){ var pw={}; Object.keys(PWR).forEach(function(k){ if(typeof r.pw[k]==='number'&&isFinite(r.pw[k])) pw[k]=Math.round(dzn(r.pw[k],PWR[k][0],PWR[k][1],PWD[k])*100)/100 }); if(r.pw.on===0) pw.on=0; if(r.pw.cm===1&&typeof pw.c==='number') pw.cm=1; if(Object.keys(pw).length) d.pw=pw }
   if(r.meas&&typeof r.meas==='object'){ var ms={}, nk=0; Object.keys(r.meas).forEach(function(k){ var v=r.meas[k]; if(nk<300&&typeof v==='number'&&isFinite(v)&&d.nodes.some(function(n){ return n.id===k&&BECKER_AMP[n.type] })){ ms[k]=Math.round(Math.max(0,Math.min(60,v))*100)/100; nk++ } }); if(nk) d.meas=ms }
+  if(Array.isArray(r.tx)){ var txl=[], txm=0; r.tx.slice(0,150).forEach(function(o){ if(!o||typeof o!=='object'||typeof o.id!=='string'||!/^t\d{1,5}$/.test(o.id)||txl.some(function(q){ return q.id===o.id })) return;
+      txl.push({id:o.id,x:Math.round(dzn(o.x,0,6000,100)),y:Math.round(dzn(o.y,0,4000,100)),t:String(o.t==null?'':o.t).slice(0,600),f:TXF[o.f]?o.f:'Arial',s:Math.round(dzn(o.s,8,72,16)),b:o.b?1:0,i:o.i?1:0,u:o.u?1:0,c:(typeof o.c==='string'&&/^#[0-9a-fA-F]{6}$/.test(o.c))?o.c:'#14213A',bg:(o.bg==='box'||o.bg==='hl')?o.bg:'',al:(o.al==='c'||o.al==='r')?o.al:'l'}); txm=Math.max(txm,+o.id.slice(1)) });
+    if(txl.length){ d.tx=txl; d.ntx=Math.max(txm,(typeof r.ntx==='number'&&isFinite(r.ntx))?Math.min(99999,Math.round(r.ntx)):0) } }
   return d;
 }
 function dzCleanDoc(r,id){
@@ -2722,9 +2807,11 @@ function dzSim(full){
   R.pw=dzPower(d); R.cut={};
   var blk={}; if(R.pw.check) d.nodes.forEach(function(n){ if(PWAMP[n.type]){ var a0=R.pw.amp[n.id]; if(a0&&!a0.ok) blk[n.id]=1 } });
   var ch=true, g=0;
-  while(ch&&g++<400){ ch=false; d.cabs.forEach(function(c){ if(dzIsPw(c.port)||c.from==null||c.to==null||blk[c.from]) return; if(depth[c.from]!==undefined&&depth[c.to]===undefined){ depth[c.to]=depth[c.from]+1; reach[c.to]=1; ch=true } }) }
+  var nb={}; d.nodes.forEach(function(n){ nb[n.id]=n }); R.term={};
+  var isT=function(id,port){ var q=nb[id]; return !!(q&&JPDER[q.type]&&q.jp&&q.jp[port]==='t') };
+  while(ch&&g++<400){ ch=false; d.cabs.forEach(function(c){ if(dzIsPw(c.port)||c.from==null||c.to==null||blk[c.from]||isT(c.from,c.port)) return; if(depth[c.from]!==undefined&&depth[c.to]===undefined){ depth[c.to]=depth[c.from]+1; reach[c.to]=1; ch=true } }) }
   /* lo que queda sin RF por culpa de un amplificador sin voltaje: guardo cuál es el que corta */
-  d.nodes.forEach(function(n){ if(reach[n.id]||n.type==='root'||ISPW[n.type]) return; var p=by[n.id]&&by[n.id].parent, g2=0; while(p&&!reach[p]&&g2++<400) p=by[p]&&by[p].parent; if(p&&reach[p]&&blk[p]) R.cut[n.id]=p });
+  d.nodes.forEach(function(n){ if(reach[n.id]||n.type==='root'||ISPW[n.type]) return; var q=n.id, p=by[n.id]&&by[n.id].parent, g2=0; while(p&&!reach[p]&&g2++<400){ q=p; p=by[p]&&by[p].parent } if(p&&reach[p]&&blk[p]) R.cut[n.id]=p; else if(p&&reach[p]&&by[q]&&isT(p,by[q].out)){ R.cut[n.id]=p; R.term[n.id]=1 } });
   var lim=(DZ.sim&&!full)?DZ.simLv:Infinity;
   Object.keys(depth).forEach(function(k){ if(depth[k]<=lim) R.on[k]=1 });
   /* Alimentación (voltaje) y señal (RF) son cosas distintas: sin voltaje el LED está apagado; con voltaje y sin RF el LED sale rojo;
@@ -2766,7 +2853,7 @@ function dzPorts(n){
   var bot=function(gp,fx){ return gp?{x:n.x+gp.x,y:n.y+gp.y-1.5}:{x:n.x+fx*b.w,y:n.y+b.h/2-1.5} };
   if(n.type==='vpc'){ r.pwl=bot(g&&g.pwl,-0.21); r.pwr=bot(g&&g.pwr,0.21) }
   else if(HASPW[n.type]) r.pw=bot(g&&g.pw,0);
-  if(ISPW[n.type]) r.pws=bot(g&&g.pws,0);
+  if(ISPW[n.type]){ r.pws=bot(g&&g.pws,0); r.pws1=(g&&g.pws1)?bot(g.pws1,0):{x:n.x-b.w*0.24,y:r.pws.y}; r.pws2=(g&&g.pws2)?bot(g.pws2,0):{x:n.x+b.w*0.24,y:r.pws.y} }
   r.inn={x:n.x+inX(rn),y:n.y+inDy(rn)};
   return r;
 }
@@ -2854,6 +2941,7 @@ function dzHandle(x,y,cid,end,sel,loose){
 function dzCableSvg(c,q,sel,flow,PW,dim,tr){
   var s=q.s, e=q.e, pw=dzIsPw(c.port), r=dzCabRoute(c,s,e,q.box), d=r.d, line=(pw?powerSvg(d):cableSvg(d)).replace(/<path /g,'<path pointer-events="none" ');
   var sgm=pw?c.m:(DZ._seg||dzSegFn(DZ.d))(c), lab=nf.format(Math.round(sgm*10)/10)+' m', cls='elabel'+(pw?'':' tramo'), ch=dzChevT(c,r,PW), arm=(pw&&PW)?PW.armBy[c.id]:null, cb=(!pw&&PW)?PW.cab[c.id]:null, dcOn=false, dcRev=false;
+  var jf=(!pw&&c.from!=null)?dzNode(c.from):null; if(jf&&JPDER[jf.type]&&jf.jp&&jf.jp[c.port]) lab+='<tspan class="jpc '+jf.jp[c.port]+'"> · '+(jf.jp[c.port]==='t'?'✖ TERMINATE':'⚡✖ RF ONLY')+'</tspan>';
   if(pw&&DZ.sim&&arm){ lab=nf.format(c.m)+' m · '+(arm.n?nfA.format(arm.A)+' A · '+arm.k+'/'+arm.n+' amp':'0 amp'); cls+=' pwlab '+(!arm.n?'warn':(arm.k===arm.n?dzVst(arm.vmin,PW.prm):(arm.k?'warn':'bad'))) }
   if(DZ.sim&&PW&&PW.has){ if(pw){ if(arm&&arm.A>1e-6){ dcOn=true; dcRev=true } if(arm&&arm.trip){ lab=nf.format(c.m)+' m · LLAVE SALTÓ ('+nfA.format(arm.Areq)+' A)'; cls+=' pwlab bad' } else if(arm&&arm.ovl){ lab+=' · SOBRECARGA LLAVE '+nf.format(arm.brk)+' A'; cls=cls.replace(/ (ok|warn)\b/,'')+' bad' } } else if(cb&&(cb.A>1e-6||cb.b>0.5)){ dcOn=true; dcRev=PW.flow[c.id]<0; lab+='<tspan class="dcl"> · '+(cb.A>1e-6?nfA.format(cb.A)+' A':nfV.format(cb.b)+' V, 0 A')+'</tspan>' } }
   return '<g class="dc'+(dim?' nrf':'')+'" data-cid="'+c.id+'"><path class="hit" d="'+d+'" fill="none" stroke="transparent" stroke-width="22" stroke-linejoin="round"/>'+
@@ -2891,6 +2979,7 @@ function dzNodeSvg(n,P,S,ledN){
   ring+='<rect class="mring" x="'+(-b.w/2-10)+'" y="'+(-b.h/2-10)+'" width="'+(b.w+20)+'" height="'+(b.h+20)+'" rx="9"/>';
   var lab='';
   if(!rn.root) lab+='<text class="nlabel" y="'+(up?-(b.h/2+7):(b.h/2+20))+'">'+n.id+'</text>';
+  if(!rn.root) lab+=dzJpTags(n,P,b,up);
   var fixL=lab; lab='';
   var POS=S.pos&&S.pos[n.id];
   if(!DZ.sim&&POS&&!rn.root) lab+=dzPosLab(n,b,POS,up&&HASPW[n.type]?(b.h/2+20):(b.h/2+36));
@@ -2899,7 +2988,7 @@ function dzNodeSvg(n,P,S,ledN){
       lab+='<text class="nlabel" y="'+(b.h/2+36)+'" style="font-weight:700;font-size:14px;fill:#d00000">−'+nf2.format(L.sp.db)+' dB</text><text class="nlabel" y="'+(b.h/2+50)+'" style="font-weight:800;font-size:12px;fill:#0b3d91">📍 '+nf.format(Math.round(pcab))+' m desde '+esc(L.sp.from?(L.sp.from.root?'cabecera':L.sp.from.code):'cabecera')+'</text><text class="nlabel" y="'+(b.h/2+64)+'" style="font-weight:700;fill:'+LEDCOL[L.st]+'">'+(eqm>0.5?'+'+nf.format(Math.round(eqm))+' puertos = '+nf.format(Math.round(L.sp.total))+' m · ':'')+'LED '+LEDNAME[L.st].toUpperCase()+'</text>';
       if(S.noise&&S.noise[n.id]) lab+='<text class="nlabel" y="'+(b.h/2+78)+'" style="font-weight:800;font-size:11px;fill:#b45309">⚠ CON RUIDO (viene de '+esc(S.noise[n.id])+')</text>' }
     else lab+='<text class="nlabel" y="'+(b.h/2+34)+'" style="font-weight:700;fill:'+LEDCOL[L.st]+'">'+nf.format(L.sp.total)+' m = <tspan style="fill:#d00000">−'+nf2.format(mToDb(L.sp.total))+' dB</tspan></text>' }
-  lab+=dzVoltLab(n,b,S)+(ISPW[n.type]?dzSrcLab(n,b,S):'');
+  lab+=dzVoltLab(n,b,S); var clampL=ISPW[n.type]?dzSrcLab(n,b,S):''; /* v20: la pinza va aparte: no se acomoda sola y se puede arrastrar */
   if(trk==='cut'||trk==='top') lab+='<text class="nlabel" y="'+(up?-(b.h/2+46):(b.h/2+78))+'" style="font-weight:800;font-size:11px;fill:#d00000">'+(trk==='cut'?'✕ LA RF SE CORTA AQUÍ':'✕ SIN CABLE DE ENTRADA')+'</text>';
   var A=S.arr&&S.arr[n.id];
   if(A&&DZ.sim){ var nlA=2+(A.eq?1:0)+(A.amp&&!BECKER_AMP[n.type]?1:0), ay=up?-(b.h/2+21)-(nlA-1)*14:(b.h/2+36), sy=14;
@@ -2912,7 +3001,7 @@ function dzNodeSvg(n,P,S,ledN){
   if(BECKER_AMP[n.type]&&(n.ip||DZ.sim)) fixL+=ipTag(rn,b);
   var nm=rn.root?'cabecera RF, de aquí nace la señal de radiofrecuencia':n.id+', '+dzName(n.type)+(n.ip&&BECKER_AMP[n.type]?', código '+n.ip:'')+(L?(L.norf?', con voltaje pero sin RF, LED rojo':(L.nopw?', sin voltaje, LED apagado':(L.st==='x'?', sin señal':', LED '+LEDNAME[L.st]))):'')+(A&&DZ.sim?', llegan '+nf2.format(A.db)+' dB y '+nf.format(A.cab)+' m de cable':'');
   return '<g class="dn'+(DZ.multi.indexOf(n.id)>=0?' msel':'')+'" data-id="'+n.id+'" data-bw="'+b.w+'" data-bh="'+b.h+'" transform="translate('+n.x+' '+n.y+')" tabindex="0" role="button" aria-label="'+esc(nm)+'"><title>'+esc(nm)+'</title>'+
-    '<rect x="'+(-b.w/2-8)+'" y="'+(-b.h/2-46)+'" width="'+(b.w+16)+'" height="'+(b.h+72)+'" fill="transparent"/>'+ring+dzBodySvg(n,P,S,ledN)+'<g class="lfix">'+fixL+'</g>'+(lab?'<g class="lblk">'+lab+'</g>':'')+'</g>';
+    '<rect x="'+(-b.w/2-8)+'" y="'+(-b.h/2-46)+'" width="'+(b.w+16)+'" height="'+(b.h+72)+'" fill="transparent"/>'+ring+dzBodySvg(n,P,S,ledN)+'<g class="lfix">'+fixL+'</g>'+(lab?'<g class="lblk">'+lab+'</g>':'')+clampL+'</g>';
 }
 /* voltaje en cada puerto de un derivador (simulación con alimentación) */
 function dzPortV(n,S,i){
@@ -2940,7 +3029,12 @@ function dzPortsSvg(n,PS,S){
     h+='<g class="dport'+(armed?' arm':'')+'" data-port="'+i+'"><title>'+(rn.root?'Salida de la cabecera':'Salida '+(PM[n.type]?'(puerto '+portNum(n.type,i)+')':(i+1)))+': toca y luego toca el equipo donde llega el cable</title><circle class="ph" cx="'+rx.toFixed(1)+'" cy="'+ry.toFixed(1)+'" r="17"/><circle class="ring" cx="'+rx.toFixed(1)+'" cy="'+ry.toFixed(1)+'" r="11"/><circle class="pc" cx="'+rx.toFixed(1)+'" cy="'+ry.toFixed(1)+'" r="6"/></g>';
   });
   dzPwList(n.type).forEach(function(pk){ if(!dzOutCab(n.id,pk)) h+=dzPwPortHtml(n,P,pk) });
-  if(ISPW[n.type]&&P.pws){ if(!dzInCab(n.id)) h+=dzPwPortHtml(n,P,'s'); else h+='<circle class="pjoin" cx="'+(P.pws.x-n.x).toFixed(1)+'" cy="'+(P.pws.y-n.y).toFixed(1)+'" r="3.4"/>' }
+  if(ISPW[n.type]&&P.pws){ var ns=dzSrcCabs(n.id).length, T1=P.pws1||P.pws, T2=P.pws2||P.pws;
+    [T1,T2].forEach(function(T,k){ var tx=(T.x-n.x).toFixed(1), ty=(T.y-n.y).toFixed(1);
+      h+='<text class="stnum" x="'+tx+'" y="'+(T.y-n.y-9).toFixed(1)+'" text-anchor="middle">'+(k+1)+'</text>';
+      if(k<ns) h+='<circle class="pjoin" cx="'+tx+'" cy="'+ty+'" r="3.4"/>';
+      else if(k===ns) h+=dzPwPortHtml(n,Object.assign({},P,{pws:T}),'s');
+      else h+='<circle class="stfree" cx="'+tx+'" cy="'+ty+'" r="5"/>' }) }
   return '<g class="dp" data-id="'+n.id+'" transform="translate('+n.x+' '+n.y+')">'+h+'</g>';
 }
 function dzPad(el){ var q=getComputedStyle(el); return {l:parseFloat(q.paddingLeft)||0,r:parseFloat(q.paddingRight)||0,t:parseFloat(q.paddingTop)||0,b:parseFloat(q.paddingBottom)||0} }
@@ -2966,11 +3060,170 @@ function dzCanvas(){
   var sl=cv.scrollLeft, st=cv.scrollTop;
   cv.innerHTML=(DZ.sim?dzKeyHtml(S.pw):'')+'<svg id="dz-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+DZ.W+' '+DZ.H+'" width="'+(DZ.W*z)+'" height="'+(DZ.H*z)+'" role="group" aria-label="Plano del diseño">'+
     dzLedDefs()+'<defs><pattern id="dzg1" x="-1" y="-1" width="'+SNAP+'" height="'+SNAP+'" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#c3cbd9"/></pattern><pattern id="dzg5" x="-1.4" y="-1.4" width="'+(SNAP*5)+'" height="'+(SNAP*5)+'" patternUnits="userSpaceOnUse"><circle cx="1.4" cy="1.4" r="1.2" fill="#a3aec2"/></pattern></defs>'+
-    '<rect id="dz-bg" width="'+DZ.W+'" height="'+DZ.H+'" fill="'+(z>=0.5?'url(#dzg1)':'transparent')+'"/><rect id="dz-bg5" width="'+DZ.W+'" height="'+DZ.H+'" fill="url(#dzg5)" pointer-events="none"/>'+cs+ns+ps+hs+hint+'<path id="dz-rb" class="rb" d="" style="display:none"/><rect id="dz-band" class="band" x="0" y="0" width="0" height="0" style="display:none"/></svg>';
+    '<rect id="dz-bg" width="'+DZ.W+'" height="'+DZ.H+'" fill="'+(z>=0.5?'url(#dzg1)':'transparent')+'"/><rect id="dz-bg5" width="'+DZ.W+'" height="'+DZ.H+'" fill="url(#dzg5)" pointer-events="none"/>'+cs+ns+ps+hs+hint+dzTxSvg()+'<path id="dz-rb" class="rb" d="" style="display:none"/><rect id="dz-band" class="band" x="0" y="0" width="0" height="0" style="display:none"/></svg>';
   cv.scrollLeft=sl; cv.scrollTop=st;
+  try{ dzTxPost() }catch(err){}
   try{ dzDeclutter() }catch(err){}
   if(DZ.arm) dzMark(DZ.arm.from,DZ.arm.port);
 }
+/* v16: JUMPERS como en el equipo real.
+   Amplificador Becker: JU24 (entrada) y JU25 (salida); en OFF ese lado no toma ni deja pasar voltaje (la RF sigue pasando si el amplificador prende por el otro lado).
+   Derivador Becker SP2/SP3: por cada salida NORMAL (RF y voltaje), RF ONLY (RF sin voltaje) o TERMINATE (ni RF ni voltaje). */
+var JPDER={der2:1,der3:1}, JPNAME={der2:['J1–J3','J4–J6'],der3:['J1–J3','J4–J6','J7–J9']};
+function dzJpTags(n,P,b,up){
+  var h='', tag=function(x,y,t,col,anc){ return '<text x="'+x+'" y="'+y+'" text-anchor="'+(anc||'middle')+'" class="jptag" style="fill:'+col+'">'+t+'</text>' };
+  if(BECKER_AMP[n.type]&&(n.ji==='0'||n.jo==='0')){ var yy=up?(b.h/2+15):-(b.h/2+36);
+    if(n.ji==='0') h+=tag(-b.w/2+2,yy,'⛔ JU24 OFF','#c00000','start');
+    if(n.jo==='0') h+=tag(b.w/2-2,yy+(n.ji==='0'?-13:0),'⛔ JU25 OFF','#c00000','end') }
+  return h;
+}
+function dzJpHtml(n){
+  if(!BECKER_AMP[n.type]&&!JPDER[n.type]) return '';
+  var h='<div class="jpbox"><h4>🔧 Jumpers del equipo</h4>';
+  if(BECKER_AMP[n.type]){
+    h+='<p class="small">Puentes rojos de la tarjeta. En <b>OFF</b> ese lado no toma voltaje ni lo deja pasar al siguiente tramo. El amplificador prende si le llega voltaje por un lado que esté en ON.</p><div class="jprow">'+
+      [['ji','JU24 · entrada'],['jo','JU25 · salida']].map(function(q){ var on=n[q[0]]!=='0'; return '<button type="button" class="btn ghost jpb '+(on?'on':'off')+'" data-jp="'+q[0]+'" data-id="'+esc(n.id)+'"><span>'+q[1]+'</span><b>'+(on?'ON · pasa voltaje':'OFF · sin voltaje')+'</b></button>' }).join('')+'</div>';
+  } else {
+    h+='<p class="small">Jumpers azules por cada salida: <b>NORMAL</b> pasa RF y voltaje · <b>RF ONLY</b> pasa la RF pero no el voltaje · <b>TERMINATE</b> no pasa nada.</p>';
+    for(var i=0;i<(OUTS[n.type]||0);i++){ var v=(n.jp&&n.jp[i])||'n';
+      h+='<div class="jpport"><span class="lab">Puerto '+portNum(n.type,i)+' · '+esc(PM[n.type].pos[i])+' <i>('+JPNAME[n.type][i]+')</i></span><div class="seg jpseg">'+
+        [['n','NORMAL'],['rf','RF ONLY'],['t','TERMINATE']].map(function(q){ return '<label class="'+q[0]+'"><input type="radio" name="jp'+i+'" data-jpp="'+i+'" data-id="'+esc(n.id)+'" value="'+q[0]+'"'+(v===q[0]?' checked':'')+'>'+q[1]+'</label>' }).join('')+'</div></div>' }
+  }
+  return h+(DZ.sim?'<p class="small hint">Puedes cambiarlos mientras simulas: el resultado se actualiza al momento.</p>':'')+'</div>';
+}
+function dzJpApply(fn){ dzPush(); fn(); DZ.pwk=null; if(DZ.sim){ clearInterval(DZ.simTm); DZ.simTm=null; DZ.simLv=1e9 } dzStore(); renderDesign() }
+document.addEventListener('click',function(ev){ var b=ev.target&&ev.target.closest&&ev.target.closest('[data-jp]'); if(!b) return; var n=dzNode(b.getAttribute('data-id')); if(!n||!BECKER_AMP[n.type]) return; var k=b.getAttribute('data-jp');
+  dzJpApply(function(){ if(n[k]==='0') delete n[k]; else n[k]='0' }) });
+document.addEventListener('change',function(ev){ var t=ev.target; if(!t||!t.getAttribute||t.getAttribute('data-jpp')===null) return; var n=dzNode(t.getAttribute('data-id')); if(!n||!JPDER[n.type]) return; var i=t.getAttribute('data-jpp');
+  dzJpApply(function(){ n.jp=n.jp||{}; if(t.value==='n') delete n.jp[i]; else n.jp[i]=t.value; if(!Object.keys(n.jp).length) delete n.jp }) });
+/* v15: TEXTOS libres en el plano, como en Visio (tipo de letra, tamaño, negrita, cursiva, subrayado, color, fondo y alineación) */
+var TXF={'Arial':"Arial,'Liberation Sans',Helvetica,sans-serif",'Calibri':"Calibri,Carlito,'Segoe UI',sans-serif",'Verdana':"Verdana,'DejaVu Sans',sans-serif",'Arial Black':"'Arial Black','Archivo Black',Arial,sans-serif",'Times New Roman':"'Times New Roman',Times,'Liberation Serif',serif",'Courier New':"'Courier New',Courier,'Liberation Mono',monospace",'Consolas':"Consolas,'IBM Plex Mono',monospace"};
+var TXSZ=[8,9,10,11,12,14,16,18,20,22,24,28,32,36,40,48,56,64,72];
+var TXCOL=[['#14213A','Negro'],['#1F4E9E','Azul'],['#d00000','Rojo'],['#1B8449','Verde'],['#d4621b','Naranja'],['#7a3fb0','Morado'],['#6b7689','Gris'],['#ffffff','Blanco']];
+var TXPRE={tit:{nm:'Título',p:{f:'Arial Black',s:28,b:1,i:0,u:0,c:'#14213A',bg:'',al:'l'},t:'TÍTULO DEL PLANO'},niv:{nm:'Nivel / Galería',p:{f:'Arial',s:18,b:1,i:0,u:0,c:'#1F4E9E',bg:'box',al:'c'},t:'NV 2400 · GALERÍA 1'},nota:{nm:'Nota',p:{f:'Calibri',s:14,b:0,i:0,u:0,c:'#3b2a00',bg:'hl',al:'l'},t:'Nota: '},adv:{nm:'⚠ Advertencia',p:{f:'Arial',s:16,b:1,i:0,u:0,c:'#c00000',bg:'box',al:'l'},t:'⚠ ATENCIÓN: '}};
+function dzTx(id){ var T=DZ.d.tx||[]; for(var i=0;i<T.length;i++) if(T[i].id===id) return T[i]; return null }
+function dzTxSvg(){
+  var T=DZ.d.tx||[]; if(DZ.tsel&&!dzTx(DZ.tsel)) DZ.tsel=null; if(!T.length) return '';
+  return '<g id="dz-txl">'+T.map(function(o){
+    var ln=String(o.t||'').split('\n'), emp=!String(o.t||'').trim(), anc={l:'start',c:'middle',r:'end'}[o.al||'l'], lh=Math.round(o.s*1.25);
+    var st='font-family:'+TXF[o.f]+';font-size:'+o.s+'px;font-weight:'+(o.b?800:400)+';font-style:'+(o.i||emp?'italic':'normal')+';text-decoration:'+(o.u?'underline':'none')+';fill:'+(emp?'#9aa5b8':o.c)+';white-space:pre';
+    if(emp) ln=['(texto vacío)'];
+    return '<g class="dtx'+(DZ.tsel===o.id?' sel':'')+'" data-tx="'+o.id+'" data-bg="'+(o.bg||'')+'" transform="translate('+o.x+' '+o.y+')"><text text-anchor="'+anc+'" style="'+st+'">'+ln.map(function(l,k){ return '<tspan x="0" dy="'+(k?lh:Math.round(o.s*0.9))+'">'+(esc(l)||' ')+'</tspan>' }).join('')+'</text></g>' }).join('')+'</g>';
+}
+function dzTxPost(){
+  var NS='http://www.w3.org/2000/svg';
+  $$('#dz-svg .dtx').forEach(function(g){ var t=g.querySelector('text'); if(!t) return; var b=t.getBBox(), bg=g.getAttribute('data-bg'), px=bg?7:4, py=bg?4:3;
+    var mk=function(cls){ var r=document.createElementNS(NS,'rect'); r.setAttribute('x',b.x-px); r.setAttribute('y',b.y-py); r.setAttribute('width',b.width+2*px); r.setAttribute('height',b.height+2*py); r.setAttribute('rx',bg==='hl'?3:5); r.setAttribute('class',cls); return r };
+    g.insertBefore(mk('txhit'+(bg==='box'?' box':(bg==='hl'?' hl':''))),t);
+    if(g.classList.contains('sel')){ var s2=mk('txsel'); s2.setAttribute('x',b.x-px-4); s2.setAttribute('y',b.y-py-4); s2.setAttribute('width',b.width+2*px+8); s2.setAttribute('height',b.height+2*py+8); g.appendChild(s2) } });
+}
+function dzTxSel(id){ DZ.tsel=id; DZ.sel=null; DZ.multi=[]; DZ.arm=null; DZ.panel='info'; DZ.msg=''; DZ.err=false }
+function dzTxAdd(pre){
+  var d=DZ.d; d.tx=d.tx||[]; if(d.tx.length>=150){ dzSay('Ya hay 150 textos: es el máximo en un diseño.',true); return }
+  dzPush(); d.ntx=(d.ntx||0)+1; var cv=$('#dz-canvas'), z=DZ.zoom||1, P=pre&&TXPRE[pre];
+  var o={id:'t'+d.ntx,x:cv?Math.round((cv.scrollLeft+cv.clientWidth/2)/z-60):200,y:cv?Math.round((cv.scrollTop+cv.clientHeight/2)/z-12):200,t:P?P.t:'Texto',f:'Arial',s:16,b:0,i:0,u:0,c:'#14213A',bg:'',al:'l'};
+  if(P) Object.keys(P.p).forEach(function(k){ o[k]=P.p[k] });
+  o.x=Math.max(10,Math.min(DZ.W-40,o.x)); o.y=Math.max(10,Math.min(DZ.H-20,o.y));
+  d.tx.push(o); dzTxSel(o.id); dzStore(); renderDesign(); try{ dzSideOpen() }catch(e){}
+  setTimeout(function(){ var ta=$('#tx-t'); if(ta){ ta.focus(); try{ ta.setSelectionRange(ta.value.length,ta.value.length) }catch(e){} } },60);
+}
+function dzTxDel(){ var o=dzTx(DZ.tsel); if(!o) return; dzPush(); DZ.d.tx=DZ.d.tx.filter(function(q){ return q!==o }); if(!DZ.d.tx.length) delete DZ.d.tx; DZ.tsel=null; dzStore(); renderDesign() }
+function dzTxCopy(cut){ var o=dzTx(DZ.tsel); if(!o) return; DZ.clipTx=JSON.parse(JSON.stringify(o)); DZ.lastClip='t'; DZ.txPasteN=0; if(cut) dzTxDel(); else{ dzSay('Texto copiado. Toca «Pegar» (Ctrl+V) para ponerlo de nuevo.'); dzBar() } }
+function dzTxPaste(){ var c=DZ.clipTx, d=DZ.d; if(!c) return; d.tx=d.tx||[]; if(d.tx.length>=150){ dzSay('Ya hay 150 textos: es el máximo en un diseño.',true); return }
+  dzPush(); d.ntx=(d.ntx||0)+1; DZ.txPasteN=(DZ.txPasteN||0)+1; var o=JSON.parse(JSON.stringify(c)); o.id='t'+d.ntx; o.x=Math.min(DZ.W-40,c.x+30*DZ.txPasteN); o.y=Math.min(DZ.H-20,c.y+30*DZ.txPasteN);
+  d.tx.push(o); dzTxSel(o.id); dzStore(); renderDesign() }
+function dzTxAct(a,b){
+  if(a==='txadd'||a==='txpre'){ if(DZ.sim){ dzLocked(); return true } dzTxAdd(a==='txpre'?b.getAttribute('data-p'):null); return true }
+  if(a==='paste'&&DZ.lastClip==='t'&&DZ.clipTx){ if(DZ.sim){ dzLocked(); return true } dzTxPaste(); return true }
+  if(DZ.tsel&&!DZ.sel&&!DZ.multi.length&&dzTx(DZ.tsel)&&(a==='copy'||a==='cut'||a==='dup'||a==='delsel')){
+    if(DZ.sim){ dzLocked(); return true }
+    if(a==='copy') dzTxCopy(false); else if(a==='cut') dzTxCopy(true); else if(a==='dup'){ dzTxCopy(false); dzTxPaste() } else dzTxDel();
+    return true }
+  return false;
+}
+function dzTxBar(){
+  if(DZ.sim) return; var on=!!(DZ.tsel&&!DZ.sel&&!DZ.multi.length&&dzTx(DZ.tsel));
+  if(on) ['copy','cut','dup','delsel'].forEach(function(k){ var e=$('[data-dz="'+k+'"]'); if(e){ e.disabled=false; if(k==='delsel'){ e.setAttribute('aria-label','Borrar el texto seleccionado'); e.title='Borrar el texto seleccionado' } } });
+  if(DZ.lastClip==='t'&&DZ.clipTx){ var pe=$('[data-dz="paste"]'); if(pe) pe.disabled=false }
+}
+function dzTxHtml(){
+  var o=dzTx(DZ.tsel), ro=DZ.sim?' disabled':''; if(!o) return '';
+  var pr=function(on){ return ' aria-pressed="'+(on?'true':'false')+'"' };
+  var h='<h3>Texto</h3>'+(DZ.sim?'<p class="small lock">Estás simulando: el texto se ve pero no se puede cambiar. Para editarlo toca <b>■ Parar</b>.</p>':'<p class="small hint">Escribe aquí. Con <b>Enter</b> haces otra línea. Para moverlo, arrastra el texto en el plano.</p>')+
+    '<textarea id="tx-t" class="txta" rows="3" maxlength="600" data-txin="t"'+ro+' style="font-family:'+TXF[o.f]+';font-weight:'+(o.b?800:400)+';font-style:'+(o.i?'italic':'normal')+';text-decoration:'+(o.u?'underline':'none')+'">'+esc(o.t||'')+'</textarea>'+
+    '<div class="txgrid">'+
+    '<label class="fld"><span class="lab">Tipo de letra</span><select data-txin="f"'+ro+'>'+Object.keys(TXF).map(function(k){ return '<option value="'+esc(k)+'"'+(o.f===k?' selected':'')+' style="font-family:'+TXF[k]+'">'+esc(k)+'</option>' }).join('')+'</select></label>'+
+    '<div class="fld"><span class="lab">Tamaño</span><div class="txrow"><button type="button" class="btn ghost" data-tx="s-"'+ro+' title="Más pequeño">A−</button><select data-txin="s"'+ro+'>'+TXSZ.concat(TXSZ.indexOf(o.s)<0?[o.s]:[]).sort(function(a,b){ return a-b }).map(function(v){ return '<option value="'+v+'"'+(o.s===v?' selected':'')+'>'+v+'</option>' }).join('')+'</select><button type="button" class="btn ghost" data-tx="s+"'+ro+' title="Más grande">A+</button></div></div>'+
+    '</div>'+
+    '<div class="fld"><span class="lab">Estilo y alineación</span><div class="txrow">'+
+      '<button type="button" class="btn ghost txb" data-tx="b"'+pr(o.b)+ro+' title="Negrita"><b>N</b></button>'+
+      '<button type="button" class="btn ghost txb" data-tx="i"'+pr(o.i)+ro+' title="Cursiva"><i style="font-family:Georgia,serif">K</i></button>'+
+      '<button type="button" class="btn ghost txb" data-tx="u"'+pr(o.u)+ro+' title="Subrayado"><u>S</u></button>'+
+      '<span class="txsep"></span>'+
+      [['l','Izquierda','M3 5h14M3 9h9M3 13h14M3 17h9'],['c','Centro','M3 5h14M6 9h8M3 13h14M6 17h8'],['r','Derecha','M3 5h14M8 9h9M3 13h14M8 17h9']].map(function(q){ return '<button type="button" class="btn ghost txb" data-tx="al" data-v="'+q[0]+'"'+pr(o.al===q[0])+ro+' title="'+q[1]+'"><svg width="20" height="20" viewBox="0 0 20 20"><path d="'+q[2]+'" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>' }).join('')+
+    '</div></div>'+
+    '<div class="fld"><span class="lab">Color de letra</span><div class="txrow txcols">'+TXCOL.map(function(q){ return '<button type="button" class="txsw" data-tx="c" data-v="'+q[0]+'"'+pr(o.c.toLowerCase()===q[0])+ro+' title="'+q[1]+'" style="background:'+q[0]+'"></button>' }).join('')+'<label class="txpick" title="Otro color"><input type="color" data-txin="c" value="'+o.c+'"'+ro+'><span>Otro</span></label></div></div>'+
+    '<div class="fld"><span class="lab">Fondo</span><div class="seg txseg">'+[['','Sin fondo'],['box','Recuadro'],['hl','Resaltador']].map(function(q){ return '<label><input type="radio" name="txbg" data-txin="bg" value="'+q[0]+'"'+((o.bg||'')===q[0]?' checked':'')+ro+'>'+q[1]+'</label>' }).join('')+'</div></div>'+
+    (DZ.sim?'':'<div class="fld"><span class="lab">Estilos rápidos (cambian el formato de este texto)</span><div class="txrow txpres">'+Object.keys(TXPRE).map(function(k){ var P=TXPRE[k].p; return '<button type="button" class="btn ghost" data-tx="pre" data-v="'+k+'" style="font-family:'+TXF[P.f]+';font-weight:'+(P.b?800:400)+';color:'+P.c+(P.bg==='hl'?';background:#fff3a0':'')+'">'+esc(TXPRE[k].nm)+'</button>' }).join('')+'</div></div>')+
+    '<div class="btns">'+(DZ.sim?'':'<button type="button" class="btn ghost" data-dz="dup">Duplicar</button><button type="button" class="btn ghost bad" data-dz="delsel">Borrar texto</button>')+'<button type="button" class="btn ghost" data-tx="done">← Listo</button></div>';
+  return h;
+}
+function dzTxSet(fn,live){ var o=dzTx(DZ.tsel); if(!o||DZ.sim) return; if(!live) dzPush(); fn(o); dzStore(); dzCanvas(); if(!live) dzSide() }
+document.addEventListener('click',function(ev){
+  var b=ev.target&&ev.target.closest&&ev.target.closest('[data-tx]'); if(!b||!$('#dz-side')||!$('#dz-side').contains(b)) return;
+  var a=b.getAttribute('data-tx'), v=b.getAttribute('data-v');
+  if(a==='done'){ DZ.tsel=null; renderDesign(); return }
+  if(DZ.sim){ dzLocked(); return }
+  if(a==='b'||a==='i'||a==='u') dzTxSet(function(o){ o[a]=o[a]?0:1 });
+  else if(a==='al') dzTxSet(function(o){ o.al=v });
+  else if(a==='c') dzTxSet(function(o){ o.c=v });
+  else if(a==='s-'||a==='s+') dzTxSet(function(o){ var i=0, L=TXSZ; if(a==='s+'){ for(i=0;i<L.length&&L[i]<=o.s;i++); o.s=L[Math.min(L.length-1,i)] } else { for(i=L.length-1;i>=0&&L[i]>=o.s;i--); o.s=L[Math.max(0,i)] } });
+  else if(a==='pre'&&TXPRE[v]) dzTxSet(function(o){ var P=TXPRE[v].p; Object.keys(P).forEach(function(k){ o[k]=P[k] }); if(v==='adv'&&String(o.t).indexOf('⚠')<0) o.t='⚠ '+o.t });
+});
+document.addEventListener('focusin',function(ev){ var t=ev.target; if(t&&t.id==='tx-t'&&!DZ.sim&&DZ.txEdit!==DZ.tsel){ DZ.txEdit=DZ.tsel; dzPush() } });
+document.addEventListener('input',function(ev){ var t=ev.target; if(!t||!t.getAttribute||!t.getAttribute('data-txin')||DZ.sim) return; var k=t.getAttribute('data-txin');
+  if(k==='t') dzTxSet(function(o){ o.t=t.value.slice(0,600) },true);
+  else if(k==='c'&&t.type==='color'){ if(/^#[0-9a-fA-F]{6}$/.test(t.value)) dzTxSet(function(o){ o.c=t.value.toLowerCase() },true) } });
+document.addEventListener('change',function(ev){ var t=ev.target; if(!t||!t.getAttribute||!t.getAttribute('data-txin')||DZ.sim) return; var k=t.getAttribute('data-txin');
+  if(k==='f'&&TXF[t.value]) dzTxSet(function(o){ o.f=t.value });
+  else if(k==='s') dzTxSet(function(o){ o.s=Math.max(8,Math.min(72,parseInt(t.value,10)||16)) });
+  else if(k==='bg') dzTxSet(function(o){ o.bg=t.value });
+  else if(k==='c') dzSide(); });
+/* arrastrar y tocar textos en el plano */
+document.addEventListener('pointerdown',function(ev){
+  var cv=$('#dz-canvas'); if(!cv||!cv.contains(ev.target)) return;
+  var g=ev.target.closest&&ev.target.closest('.dtx');
+  if(!g){ if(DZ.tsel) DZ.txClear=true; return }
+  if(ev.pointerType==='mouse'&&ev.button!==0) return;
+  ev.stopPropagation(); ev.preventDefault();
+  var o=dzTx(g.getAttribute('data-tx')); if(!o) return;
+  DZ.txd={id:o.id,cx:ev.clientX,cy:ev.clientY,ox:o.x,oy:o.y,moved:false,g:g};
+},true);
+window.addEventListener('pointermove',function(ev){ var q=DZ.txd; if(!q||DZ.sim) return;
+  var z=DZ.zoom||1, dx=(ev.clientX-q.cx)/z, dy=(ev.clientY-q.cy)/z; if(!q.moved&&Math.hypot(dx*z,dy*z)<5) return;
+  if(!q.moved){ q.moved=true; dzPush() } var o=dzTx(q.id); if(!o) return;
+  o.x=Math.round(Math.max(5,Math.min(DZ.W-20,q.ox+dx))); o.y=Math.round(Math.max(5,Math.min(DZ.H-10,q.oy+dy)));
+  q.g.setAttribute('transform','translate('+o.x+' '+o.y+')'); ev.preventDefault() },true);
+window.addEventListener('pointerup',function(ev){
+  var q=DZ.txd;
+  if(!q){ if(DZ.txClear){ DZ.txClear=false; DZ.tsel=null; DZ.txEdit=null; setTimeout(function(){ dzBar(); dzSide() },0) } return }
+  DZ.txd=null; DZ.txClear=false; if(q.moved) dzStore();
+  dzTxSel(q.id); DZ.txEdit=null; renderDesign(); if(!q.moved){ try{ if(dzIsPhone()) dzSideOpen() }catch(e){} } },true);
+window.addEventListener('pointercancel',function(){ if(DZ.txd){ DZ.txd=null; renderDesign() } },true);
+/* teclado para el texto elegido */
+document.addEventListener('keydown',function(ev){
+  var pd=$('#p-disenar'); if(!pd||pd.hidden) return;
+  var tg=ev.target; if(tg&&(tg.tagName==='INPUT'||tg.tagName==='SELECT'||tg.tagName==='TEXTAREA')) return;
+  var k=(ev.key||'').toLowerCase(), mod=ev.ctrlKey||ev.metaKey, h=false;
+  if(mod&&k==='v'&&DZ.lastClip==='t'&&DZ.clipTx&&!DZ.sim){ dzTxPaste(); h=true }
+  else if(DZ.tsel&&!DZ.sel&&!DZ.multi.length&&dzTx(DZ.tsel)&&!DZ.sim){ h=true;
+    if(ev.key==='Delete'||ev.key==='Backspace') dzTxDel();
+    else if(mod&&k==='c') dzTxCopy(false); else if(mod&&k==='x') dzTxCopy(true); else if(mod&&k==='d'){ dzTxCopy(false); dzTxPaste() }
+    else if(/^Arrow/.test(ev.key)){ var st=ev.shiftKey?50:10, o=dzTx(DZ.tsel), now=Date.now(); if(now-(DZ.lastNudge||0)>1200) dzPush(); DZ.lastNudge=now;
+      o.x=Math.max(5,Math.min(DZ.W-20,o.x+(ev.key==='ArrowLeft'?-st:(ev.key==='ArrowRight'?st:0)))); o.y=Math.max(5,Math.min(DZ.H-10,o.y+(ev.key==='ArrowUp'?-st:(ev.key==='ArrowDown'?st:0)))); dzStore(); dzCanvas() }
+    else if(ev.key==='Escape'){ DZ.tsel=null; renderDesign() }
+    else h=false }
+  if(h){ ev.preventDefault(); ev.stopPropagation() } },true);
 /* v13: acomoda los textos de cada equipo para que no se monten con los de otros equipos ni con los cables */
 function dzDeclutter(){
   var svg=$('#dz-svg'); if(!svg) return; var NS='http://www.w3.org/2000/svg', obs=[], items=[], P=3;
@@ -2981,7 +3234,8 @@ function dzDeclutter(){
     var f=g.querySelector('.lfix'); if(f){ var fb=f.getBBox(); if(fb.width) obs.push(R(n.x+fb.x,n.y+fb.y,fb.width,fb.height,n.id)) }
     var k=g.querySelector('.lblk'); if(k){ var kb=k.getBBox(); if(kb.width) items.push({g:g,k:k,n:n,bw:bw,bh:bh,b:kb}) } });
   $$('#dz-svg .dc text').forEach(function(t){ var tb=t.getBBox(); if(tb.width) obs.push(R(tb.x,tb.y,tb.width,tb.height,null)) });
-  var M=svg.getScreenCTM(); if(M){ M=M.inverse(); $$('#dz-svg text.dlabel,#dz-svg text.plabel').forEach(function(t){ if(t.closest('.dn')) return; var rc=t.getBoundingClientRect(); if(!rc.width) return; var p1=svg.createSVGPoint(), p2=svg.createSVGPoint(); p1.x=rc.left; p1.y=rc.top; p2.x=rc.right; p2.y=rc.bottom; p1=p1.matrixTransform(M); p2=p2.matrixTransform(M); obs.push(R(p1.x,p1.y,p2.x-p1.x,p2.y-p1.y,null)) }) }
+  var M=svg.getScreenCTM(); if(M){ M=M.inverse(); $$('#dz-svg text.dlabel,#dz-svg text.plabel,#dz-svg .dtx').forEach(function(t){ if(t.closest('.dn')) return; var rc=t.getBoundingClientRect(); if(!rc.width) return; var p1=svg.createSVGPoint(), p2=svg.createSVGPoint(); p1.x=rc.left; p1.y=rc.top; p2.x=rc.right; p2.y=rc.bottom; p1=p1.matrixTransform(M); p2=p2.matrixTransform(M); obs.push(R(p1.x,p1.y,p2.x-p1.x,p2.y-p1.y,null)) }) }
+  if(M){ $$('#dz-svg .clamp').forEach(function(t){ var rc=t.getBoundingClientRect(); if(!rc.width) return; var p1=svg.createSVGPoint(), p2=svg.createSVGPoint(); p1.x=rc.left; p1.y=rc.top; p2.x=rc.right; p2.y=rc.bottom; p1=p1.matrixTransform(M); p2=p2.matrixTransform(M); obs.push(R(p1.x,p1.y,p2.x-p1.x,p2.y-p1.y,null)); var gd=t.closest('.dn'); if(gd&&gd.parentNode) gd.parentNode.appendChild(gd) }) }
   var cand=[]; [0,-40,40,-80,80,-120,120,-170,170].forEach(function(dx){ for(var i=-11;i<=11;i++) cand.push([dx,i*12]) });
   cand.sort(function(a,b){ return (Math.abs(a[0])*1.3+Math.abs(a[1]))-(Math.abs(b[0])*1.3+Math.abs(b[1])) });
   items.sort(function(a,b){ return a.n.x-b.n.x||a.n.y-b.n.y });
@@ -3045,9 +3299,9 @@ function dzSelIds(){
   return ids.filter(function(id){ return id!=='CAB'&&!!dzNode(id) });
 }
 function dzCopy(cut){
-  var ids=dzSelIds(); if(!ids.length){ dzSay('Toca primero un equipo (o encierra varios con ⬚ Seleccionar) y luego «'+(cut?'Cortar':'Copiar')+'».',true); return }
+  var ids=dzSelIds(); if(ids.length) DZ.lastClip='n'; if(!ids.length){ dzSay('Toca primero un equipo (o encierra varios con ⬚ Seleccionar) y luego «'+(cut?'Cortar':'Copiar')+'».',true); return }
   var set={}; ids.forEach(function(id){ set[id]=1 });
-  var nodes=DZ.d.nodes.filter(function(n){ return set[n.id] }).map(function(n){ var o={id:n.id,type:n.type,x:n.x,y:n.y}; if(typeof n.v==='number') o.v=n.v; if(cut&&n.ip) o.ip=n.ip; return o });
+  var nodes=DZ.d.nodes.filter(function(n){ return set[n.id] }).map(function(n){ var o={id:n.id,type:n.type,x:n.x,y:n.y}; if(typeof n.v==='number') o.v=n.v; if(cut&&n.ip) o.ip=n.ip; if(n.ji) o.ji=n.ji; if(n.jo) o.jo=n.jo; if(n.jp) o.jp=JSON.parse(JSON.stringify(n.jp)); return o });
   var cabs=DZ.d.cabs.filter(function(c){ return set[c.from]&&set[c.to] }).map(function(c){ var o={from:c.from,port:c.port,to:c.to,m:c.m}; if(c.via) o.via=c.via.slice(); return o });
   var withCab=DZ.multi.indexOf('CAB')>=0, rt=dzNode('CAB'), cabC=null;
   if(withCab&&rt) cabC={x:rt.x,y:rt.y,cabs:DZ.d.cabs.filter(function(c){ return c.from==='CAB'&&set[c.to] }).map(function(c){ var o={port:c.port,to:c.to,m:c.m}; if(c.via) o.via=c.via.slice(); return o })};
@@ -3068,7 +3322,7 @@ function dzPaste(){
   if(x1+dx>5900) dx=Math.max(0,dzSnap(5900-x1));
   dzPush(); DZ.pasteN=(DZ.pasteN||0)+1; var idm={}, nn=[];
   C.nodes.forEach(function(o){ var nid=(C.cut&&!d.nodes.some(function(q){ return q.id===o.id }))?o.id:dzLabel(o.type); var n={id:nid,type:o.type,x:Math.min(6000,Math.max(40,o.x+dx)),y:Math.min(4000,Math.max(40,o.y+dy))};
-    if(typeof o.v==='number') n.v=o.v;
+    if(typeof o.v==='number') n.v=o.v; if(o.ji) n.ji=o.ji; if(o.jo) n.jo=o.jo; if(o.jp) n.jp=JSON.parse(JSON.stringify(o.jp));
     if(o.ip&&BECKER_AMP[o.type]&&!d.nodes.some(function(q){ return q.ip===o.ip })) n.ip=o.ip;
     d.nodes.push(n); idm[o.id]=n.id; nn.push(n.id) });
   var nc=0; C.cabs.forEach(function(o){ if(!idm[o.from]||!idm[o.to]) return; d.nc++; nc++;
@@ -3428,7 +3682,7 @@ function dzNodeHtml(id){
     h=dzIpLineHtml(n)+(DZ.sim?'':dzIpEditHtml(n))+h }
   else if(ANY_AMP[n.type]) h=DZ.sim?'<div class="small" style="margin-top:6px">Este amplificador no es Becker: la simulación del LED solo usa el rango de los Becker (250 a 600 m), así que aquí no se calcula. Sí reinicia la cuenta de distancia.</div>'+dzArrText(n,S):'';
   else h=DZ.sim?dzArrText(n,S):'';
-  return '<div class="pv">'+ico(T.s,72,46)+'<div><div><span class="mono">'+esc(id)+'</span> · <b>'+esc(dzName(n.type))+'</b></div><div class="small" style="margin-top:4px">'+ent+'</div>'+outs+h+dzTraceHtml(id,S)+'</div></div>'+
+  return '<div class="pv">'+ico(T.s,72,46)+'<div><div><span class="mono">'+esc(id)+'</span> · <b>'+esc(dzName(n.type))+'</b></div><div class="small" style="margin-top:4px">'+ent+'</div>'+outs+h+dzTraceHtml(id,S)+'</div></div>'+dzJpHtml(n)+
     (DZ.sim?'<p class="small lock">Estás simulando: no se puede cambiar nada. Para corregir toca <b>■ Parar</b>.</p>':'')+
     '<div class="btns">'+(E3.ok?'<button type="button" class="btn ghost" data-dz="v3d" data-id="'+esc(id)+'">Ver en 3D y girarlo</button>':'')+(DZ.sim?'':'<button type="button" class="btn ghost bad" data-dz="del-n" data-id="'+esc(id)+'">Quitar este equipo</button>')+(DZ.sim?'<button type="button" class="btn ghost" data-dz="unsel">← Resultados</button>':'')+'</div>';
 }
@@ -3590,6 +3844,7 @@ function dzSimHtml(){
   var chips='<span class="chip" style="--c:'+LEDCOL.v+'"><i></i>'+S.c.v+' en verde</span> <span class="chip" style="--c:'+LEDCOL.n+'"><i></i>'+S.c.n+' en naranja</span> <span class="chip" style="--c:'+LEDCOL.r+'"><i></i>'+S.c.r+' en rojo</span>'+(S.c.f?' <span class="chip" style="--c:'+LEDCOL.r+'"><i></i>'+S.c.f+' sin RF</span>':'')+(S.c.x?' <span class="chip" style="--c:#7a8599"><i></i>'+S.c.x+' sin señal</span>':'')+(S.c.p?' <span class="chip" style="--c:#d00000"><i></i>'+S.c.p+' sin voltaje</span>':'')+(S.c.q?' <span class="chip" style="--c:#d00000"><i></i>'+S.c.q+' sobre el máximo</span>':'')+(wj.length?' <span class="chip" style="--c:'+LEDCOL.n+'"><i></i>'+wj.length+' con voltaje justo</span>':'')+(dm.length?' <span class="chip" style="--c:#b45309"><i></i>'+dm.length+' con luz tenue</span>':'');
   var other=d.nodes.filter(function(n){ return ANY_AMP[n.type]&&!BECKER_AMP[n.type]&&S.reach[n.id] }).length;
   var h='<h3>Simulación del circuito</h3><div class="simsum">'+chips+'</div>'+
+    (function(){ var al=dzBrkAlerts(S.pw); return al.map(function(x){ return '<div class="brkside '+x.k+'"><b>'+x.t+'</b><div>'+x.d+'</div><div class="small">'+x.s+'</div></div>' }).join('') })()+
     '<p class="small lock">Estás simulando: no se puede mover ni cambiar nada. Para corregir equipos, cables o metros toca <b>■ Parar</b>.</p>'+
     '<div class="btns" style="margin-top:8px"><button type="button" class="btn" data-dz="sim">■ Parar y corregir</button><button type="button" class="btn ghost" data-dz="simrun">↻ Repetir la simulación</button><label class="chk"><input type="checkbox" data-dz="blink"'+(view.blink?' checked':'')+'><span>LED parpadeando</span></label></div>'+dzJoinHtml();
   h+=dzLooseHtml()+dzFlowNote()+dzPwBlock()+dzCableBlock();
@@ -3609,7 +3864,7 @@ function dzSimHtml(){
   if(other) h+='<p class="small" style="margin:8px 0 0">'+other+' amplificador(es) Sigma o de túnel radio reinician la cuenta, pero no se simulan porque no tengo su rango.</p>';
   return h+'<p class="small" style="margin:10px 0 0">Los metros equivalentes cuentan el cable más la pérdida de los puertos de los derivadores Becker (4 dB = 100 m y 8 dB = 200 m, aparte del cable; el cable pierde '+nfD.format(DB100)+' dB cada 100 m). En derivadores, cajas y terminales los dB y los metros se cuentan desde el último amplificador (o la cabecera) hasta su entrada. El LED se enciende y apaga como si el amplificador estuviera trabajando; es solo una animación. Toca una tarjeta para ver ese equipo.</p>';
 }
-function dzSimRun(){
+function dzSimRun(){ DZ.brkHid=false;
   clearInterval(DZ.simTm); DZ.simTm=null; DZ.sim=true; DZ.panel='info'; DZ.sel=null; DZ.arm=null; DZ.err=false;
   var S=dzSim(true), mx=0; Object.keys(S.depth).forEach(function(k){ mx=Math.max(mx,S.depth[k]) });
   var rm=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -3626,6 +3881,7 @@ function dzSide(){
   var el=$('#dz-side'); if(!el) return;
   var h;
   if(DZ.panel==='save') h=dzSaveHtml(); else if(DZ.panel==='open') h=dzOpenHtml();
+  else if(DZ.tsel&&!DZ.sel&&!DZ.multi.length&&dzTx(DZ.tsel)) h=dzTxHtml();
   else if(DZ.sel&&DZ.sel.k==='n') h=dzNodeHtml(DZ.sel.id); else if(DZ.sel&&DZ.sel.k==='c') h=dzCabHtml(DZ.sel.id); else if(DZ.multi.length>=2) h=dzMultiHtml(); else h=DZ.sim?dzSimHtml():dzSumHtml();
   el.innerHTML=h; dzSideT(); if(DZ.kbT&&!el.contains(DZ.kbT)) dzKbOff();
 }
@@ -3706,6 +3962,7 @@ function dzBar(){
   var bd=$('[data-dz="delsel"]'); if(bd){ var ok=!DZ.sim&&((!!DZ.sel&&!(DZ.sel.k==='n'&&DZ.sel.id==='CAB'))||DZ.multi.length>0); bd.disabled=!ok; bd.setAttribute('aria-label',DZ.multi.length?'Borrar los '+DZ.multi.length+' equipos seleccionados':DZ.sel?(DZ.sel.k==='n'?'Borrar el equipo '+DZ.sel.id:'Borrar el cable seleccionado'):'Borrar lo seleccionado (toca primero un equipo o un cable)'); bd.title=bd.getAttribute('aria-label') }
   if(b3){ b3.hidden=!E3.ok; b3.setAttribute('aria-pressed',view.d3?'true':'false'); b3.textContent=view.d3?'3D: sí':'3D: no' }
   if(bs) bs.setAttribute('aria-pressed',DZ.panel==='save'?'true':'false'); if(bo) bo.setAttribute('aria-pressed',DZ.panel==='open'?'true':'false');
+  dzTxBar();
 }
 function renderDesign(){
   if(!$('#dz-canvas')) return;
@@ -3864,12 +4121,15 @@ function dzLockLand(){
 }
 function dzUnlock(){ try{ var o=window.screen&&screen.orientation; if(o&&o.unlock) o.unlock() }catch(e){} }
 function dzRotLayout(){ var de=document.documentElement; de.style.setProperty('--rw',window.innerWidth+'px'); de.style.setProperty('--rh',window.innerHeight+'px') }
-function dzHideEval(){
+function dzHideEval(keep){
   var z=$('#dz'); if(!z) return;
+  /* v17: al mostrar u ocultar la lista de equipos o el panel, el plano se queda con el mismo zoom y en el mismo lugar */
+  var cv0=$('#dz-canvas'), wc=null; if(keep&&cv0&&cv0.clientWidth){ var z0=DZ.zoom||1; wc={x:(cv0.scrollLeft+cv0.clientWidth/2)/z0,y:(cv0.scrollTop+cv0.clientHeight/2)/z0} }
   z.classList.toggle('hidelib',!!DZ.hideLib); z.classList.toggle('hideside',!!DZ.hideSide);
   var a=$('[data-dz="hidelib"]'), b=$('[data-dz="hideside"]');
   if(a){ a.textContent=DZ.hideLib?'▶ Mostrar equipos':'◀ Ocultar equipos'; a.setAttribute('aria-pressed',DZ.hideLib?'true':'false') }
   if(b){ b.textContent=DZ.hideSide?'◀ Mostrar panel':'Ocultar panel ▶'; b.setAttribute('aria-pressed',DZ.hideSide?'true':'false') }
+  if(wc){ var fix=function(){ var c=$('#dz-canvas'); if(!c) return; var z1=DZ.zoom||1; c.scrollLeft=Math.max(0,wc.x*z1-c.clientWidth/2); c.scrollTop=Math.max(0,wc.y*z1-c.clientHeight/2) }; fix(); requestAnimationFrame(fix); setTimeout(fix,60); return }
   if(DZ.big) dzFit();
 }
 function dzHideStore(){ lsSet('lf-hide-v1',(DZ.hideLib?'l':'')+(DZ.hideSide?'s':'')) }
@@ -3931,6 +4191,7 @@ function dzLocked(){
   DZ.msg='Estás simulando: no se puede mover ni cambiar nada. Para corregir equipos, cables o metros toca ■ Parar.'; DZ.err=false; dzMsg(); return true;
 }
 function dzAct(a,b){
+  if(dzTxAct(a,b)) return;
   DZ.conf=(a==='del-doc')?DZ.conf:null;
   if(DZEDIT[a]&&dzLocked()) return;
   switch(a){
@@ -3975,8 +4236,8 @@ function dzAct(a,b){
     case 'fit': dzFit(); break;
     case 'd3': view.d3=!view.d3; $$('input[name=sview]').forEach(function(r){ r.checked=(r.value==='3d')===view.d3 }); renderLegend(); renderAll(); break;
     case 'big': setDzBig(!DZ.big); break;
-    case 'hidelib': DZ.hideLib=!DZ.hideLib; dzHideStore(); dzHideEval(); break;
-    case 'hideside': DZ.hideSide=!DZ.hideSide; dzHideStore(); dzHideEval(); break;
+    case 'hidelib': DZ.hideLib=!DZ.hideLib; dzHideStore(); dzHideEval(true); break;
+    case 'hideside': DZ.hideSide=!DZ.hideSide; dzHideStore(); dzHideEval(true); break;
     case 'tbar': { var cvT=$('#dz-canvas'), p0=cvT?dzPad(cvT).t:0; DZ.tbHide=!DZ.tbHide; lsSet('lf-tb-v1',DZ.tbHide?'1':'0'); dzFbEval(); if(cvT){ var p1=dzPad(cvT).t; cvT.scrollTop=Math.max(0,cvT.scrollTop+(p1-p0)) } break }
     case 'rot': DZ.rotPref=(DZ.rotPref===false); lsSet('lf-rot-v1',DZ.rotPref?'1':'0'); DZ.rotWait=0; dzRotEval(); break;
     case 'libt': { var zz=$('#dz'); zz.classList.toggle('libopen'); var lo=zz.classList.contains('libopen'); dzLibBtn(); if(lo&&dzFW()<700){ zz.classList.remove('sideopen'); dzSideT() } break }
@@ -4040,7 +4301,7 @@ function dzInit(){
       dir:!fbz?function(){ return false }:(vert?function(dx,dy){ return dx>0&&Math.abs(dx)>Math.abs(dy)*1.4 }:function(dx,dy){ return dy<0&&Math.abs(dy)>Math.abs(dx)*1.4 })};
     DZ.ld=ld; ld.t=setTimeout(function(){ if(DZ.ld===ld&&!ld.on) dzLdPick(ld) },230);
   });
-  cv.addEventListener('touchstart',function(ev){ var t=ev.target; if(t.closest&&t.closest('.clamp')){ ev.preventDefault(); return } if(!DZ.sim&&((t.closest&&t.closest('.dn,.dport,.chandle,.cseg'))||DZ.selMode)) ev.preventDefault() },{passive:false});
+  cv.addEventListener('touchstart',function(ev){ var t=ev.target; if(t.closest&&t.closest('.clamp')){ ev.preventDefault(); return } if(!DZ.sim&&((t.closest&&t.closest('.dn,.dport,.chandle,.cseg,.dtx'))||DZ.selMode)) ev.preventDefault() },{passive:false});
   var pz=null;
   function pzDist(t){ return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY)||1 }
   cv.addEventListener('touchstart',function(ev){
@@ -4179,7 +4440,8 @@ function dzInit(){
     if(w){ var rb=$('#dz-rb'); if(rb) rb.style.display='none';
       if(w.moved){ dzUnmark(); var to=dzIdAt(ev.clientX,ev.clientY);
         if(w.port==='s'){ var el2=document.elementFromPoint(ev.clientX,ev.clientY), tp2=el2&&el2.closest&&el2.closest('.dport'), tk2=tp2&&dzPk(tp2.getAttribute('data-port')); if(tp2&&dzIsPw(tk2)) dzLink(tp2.parentNode.getAttribute('data-id'),tk2,w.id); else dzSay('Suelta el cable sobre el círculo negro de una terminal de alimentación.',true) }
-        else if(to&&to!==w.id) dzLink(w.id,w.port,to); else{ if(DZ.arm) dzMark(DZ.arm.from,DZ.arm.port); if(to===w.id){} else dzSay('Suelta el cable sobre el equipo donde llega.',true) } }
+        else{ if(dzIsPw(w.port)){ var tnw=to&&dzNode(to); if(!(tnw&&ISPW[tnw.type])){ var nf2=dzNearSrc(dzWorld(ev)); if(nf2) to=nf2 } }
+          if(to&&to!==w.id) dzLink(w.id,w.port,to); else{ if(DZ.arm) dzMark(DZ.arm.from,DZ.arm.port); if(to===w.id){} else dzSay(dzIsPw(w.port)?'Suelta el cable sobre la fuente (o cerca de ella).':'Suelta el cable sobre el equipo donde llega.',true) } } }
       else if(DZ.arm&&DZ.arm.from!==w.id&&!(DZ.arm.port==='s'&&dzIsPw(w.port))) dzTapNode(w.id);
       else dzTapPort(w.id,w.port);
       return }
